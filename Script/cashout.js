@@ -29,6 +29,19 @@ document.getElementById("cashout-btn").addEventListener("click", function(){
         // 5-1-- true:: show an alert > set Balance
         alert("casout successful");
         setBalance(newBalance);
+
+        // 1- history-container ke shore niya ashbp
+        const history = document.getElementById("history-container");
+        // 2-- new div create korbo
+        const newHistory = document.createElement("div");
+        // 3-- new div innerHTML add korbo
+        newHistory.innerHTML = `
+        <div class="" id="transection-card p-5 bg-base-100">
+             Cashout ${cashoutAmount} TAKA Success to  ${cashoutNumber}, at ${new Date()}  
+        </div>
+        `
+        // 4-- history container a newDiv append korbo
+        history.append(newHistory);
     //    document.getElementById("balance").innerText = newBalance;
     }
         else{
@@ -59,7 +72,8 @@ document.getElementById("cashout-btn").addEventListener("click", function(){
 //     console.log(balance);
 
 //     // // 4-- Calculate new Balance
-//     const newBalance = Number(balance) - Number(cashoutAmount);
+//     const n+
+// ewBalance = Number(balance) - Number(cashoutAmount);
     
 
 //     if(newBalance < 0){
